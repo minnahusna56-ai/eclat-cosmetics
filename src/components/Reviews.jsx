@@ -9,7 +9,7 @@ export default function Reviews() {
         center
         label="Loved by many"
         title="What our community says"
-        subtitle="Real words from the people who wear LUMÉRA every day."
+        subtitle="Real words from the people who wear ÉCLAT every day."
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {reviews.map((r, i) => (

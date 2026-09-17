@@ -40,7 +40,7 @@ export default function Contact() {
       <div className="container-lux grid gap-10 py-14 lg:grid-cols-[1fr_1.2fr]">
         <div className="space-y-6">
           {[
-            ['Email', 'hello@lumera.beauty'],
+            ['Email', 'hello@eclat.beauty'],
             ['Phone', '+91 98765 43210'],
             ['Studio', 'Bandra West, Mumbai, India'],
             ['Hours', 'Mon–Sat · 10am – 7pm IST'],

@@ -4,7 +4,7 @@ import { useStore } from '../context/StoreContext.jsx'
 import { formatINR } from '../data/products.js'
 import { PlusIcon, MinusIcon, TrashIcon, BagIcon, ArrowIcon } from '../components/icons.jsx'
 
-const COUPONS = { LUMERA10: 0.1, GLOW20: 0.2, WELCOME: 0.15 }
+const COUPONS = { ECLAT10: 0.1, GLOW20: 0.2, WELCOME: 0.15 }
 const FREE_SHIP_THRESHOLD = 1499
 const SHIPPING_FEE = 99
 
@@ -108,7 +108,7 @@ export default function Cart() {
               />
               <button type="submit" className="btn-outline">Apply</button>
             </form>
-            <p className="mt-1.5 text-xs text-cocoa/60">Try LUMERA10, GLOW20 or WELCOME</p>
+            <p className="mt-1.5 text-xs text-cocoa/60">Try ECLAT10, GLOW20 or WELCOME</p>
 
             <dl className="mt-6 space-y-3 text-sm">
               <Row label="Subtotal" value={formatINR(subtotal)} />

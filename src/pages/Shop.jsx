@@ -142,7 +142,7 @@ export default function Shop() {
       <div className="border-b border-beige bg-sand/50">
         <div className="container-lux py-10 text-center">
           <span className="section-label">The Collection</span>
-          <h1 className="mt-2 font-serif text-4xl text-espresso sm:text-5xl">Shop LUMÉRA</h1>
+          <h1 className="mt-2 font-serif text-4xl text-espresso sm:text-5xl">Shop ÉCLAT</h1>
           <p className="mx-auto mt-3 max-w-lg text-sm text-cocoa/70">
             {filtered.length} product{filtered.length !== 1 && 's'} · clean, cruelty-free beauty
           </p>

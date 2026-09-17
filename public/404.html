@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ÉCLAT</title>
+    <script>
+      // SPA fallback for GitHub Pages (project pages under a subpath).
+      // GitHub serves this 404.html for any unknown deep link (e.g.
+      // /eclat-cosmetics/shop). We rewrite the URL into a query string and
+      // redirect to the app root, where a snippet in index.html restores it
+      // so React Router can handle the route client-side.
+      // pathSegmentsToKeep = 1 keeps the repo name segment (/eclat-cosmetics/).
+      var pathSegmentsToKeep = 1
+      var l = window.location
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join('/') +
+          '/?/' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(pathSegmentsToKeep)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+      )
+    </script>
+  </head>
+  <body></body>
+</html>

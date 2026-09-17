@@ -2,8 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SPA fallback restore: decodes the redirect from 404.html so React
+         Router receives the original deep-link path. -->
+    <script>
+      (function () {
+        var q = window.location.search
+        if (q && q.indexOf('/?/') === -1 && q[1] === '/') {
+          var decoded = q
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(
+            null,
+            null,
+            window.location.pathname.slice(0, -1) + decoded + window.location.hash
+          )
+        }
+      })()
+    </script>
     <meta name="description" content="ÉCLAT — Clean, elegant beauty products. Beauty, Simplified." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
